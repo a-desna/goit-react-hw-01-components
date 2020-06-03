@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.friendList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  width: 250px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 0 2px #c3d3cb;
+}
+
+.avatar {
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.statusGreen {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+.statusRed {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: red;
+}
