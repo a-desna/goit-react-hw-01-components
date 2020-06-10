@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Stat from './stat';
+import StatisticView from './StatisticView';
 import styles from './Statistics.module.css';
 
 function Statistics({ title, stats }) {
   return (
-    <>
-      <section className={styles.statistics}>
-        {title && <h2 className={styles.title}>{title}</h2>}
-        <ul className={styles.statList}>
-          <Stat stats={stats} />
-        </ul>
-      </section>
-    </>
+    <section className={styles.statistics}>
+      {title && <h2 className={styles.title}>{title}</h2>}
+      <ul className={styles.statList}>
+        {stats.map(item => (
+          <StatisticView stats={item} key={item.id} />
+        ))}
+      </ul>
+    </section>
   );
 }
 

@@ -5,11 +5,11 @@ import styles from './FriendList.module.css';
 
 function FriendList({ friends }) {
   return (
-    <>
-      <ul className={styles.friendList}>
-        <FriendListItem friends={friends} />
-      </ul>
-    </>
+    <ul className={styles.friendList}>
+      {friends.map(friend => (
+        <FriendListItem friends={friend} key={friend.id} />
+      ))}
+    </ul>
   );
 }
 
